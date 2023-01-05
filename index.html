@@ -1,764 +1,187 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고연우 portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/full-page-scroll.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox.css" />
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.lightbox.min.js"></script>
+    
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        /*라이트박스*/
+        $(document).ready(function ($) {
+            $('.lightbox').lightbox();
+        });
 
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+        function MM_swapImgRestore() { //v3.0
+            var i, x, a = document.MM_sr;
+            for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+        }
 
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/script.js"></script>
+        function MM_preloadImages() { //v3.0
+            var d = document;
+            if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length,
+                    a = MM_preloadImages.arguments;
+                for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) {
+                        d.MM_p[j] = new Image;
+                        d.MM_p[j++].src = a[i];
+                    }
+            }
+        }
 
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x;
+            if (!d) d = document;
+            if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document;
+                n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n];
+            for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+            if (!x && d.getElementById) x = d.getElementById(n);
+            return x;
+        }
 
-    <title>키엘 공식 온라인 몰</title>
-
+        function MM_swapImage() { //v3.0
+            var i, j = 0,
+                x, a = MM_swapImage.arguments;
+            document.MM_sr = new Array;
+            for (i = 0; i < (a.length - 2); i += 3)
+                if ((x = MM_findObj(a[i])) != null) {
+                    document.MM_sr[j++] = x;
+                    if (!x.oSrc) x.oSrc = x.src;
+                    x.src = a[i + 2];
+                }
+        }
+    </script>
 </head>
-
+<link href="style_index.css" rel="stylesheet" />
 
 <body>
-
-    <div id="wrap">
-
-        <div class="lately">
-            <div class="lately_inner">
-                <h3>최근 본 상품 (3)</h3>
-                <img src="img/키엘 2022 울트라 훼이셜 크림 홀리데이에디션 125ml.jpg" alt="">
-                <img src="img/키엘 수퍼 멀티 코렉티브 크림 75ml.jpg" alt="">
-                <img src="img/키엘 칼렌듈라 세럼 인퓨즈드 워터 크림 100ml.jpg" alt="">
-                <div class="top">
-                    <button><a href="#header">▲ TOP</a></button>
-                </div>
-            </div><!-- anwser_inner -->
-
-
-        </div><!-- lately -->
-
-
-
-
-        <header id="header" class="clear_fix">
-            <div class="header_inner">
-                <h1 class="logo clear_fix"><a href="#">로고</a></h1>
-
-
-
-                <ul class="head_list clear_fix">
-                    <li class="list_cate">
-                        <!-- <div class="list_icon"></div> -->
-                        <a href="#">카테고리</a>
-                    </li><!-- list_cate -->
-                    <li class="list_best"><a href="#">BEST</a></li>
-                    <li class="list_new"><a href="#">신상품</a></li>
-                    <li class="list_event"><a href="#">이벤트</a></li>
-                    <li class="list_brand"><a href="#">브랜드</a></li>
-                </ul><!-- head_list -->
-
-                <ul class="icon_list clear_fix">
-                    <li class="list_log"><a href="#"><img src="img/login.png" alt="login"></a></li>
-                    <li class="list_my"><a href="#"><img src="img/my.png" alt="my"></a></li>
-                    <li class="list_wish"><a href="#"><img src="img/wishlist.png" alt="wishlist"></a></li>
-                    <li class="list_search"><a href="#"><img src="img/search.png" alt="search"></a></li>
-                </ul><!-- icon_list -->
-            </div><!-- header_inner -->
-        </header><!-- header -->
-
-
-        <div class="nav_wrap">
-
-            <ul class="nav_menu clear_fix">
-
-                <li><a href="">NEW</a>
-                    <ul class="sub hair">
-                        <li><a href="#">신제품</a></li>
-                        <li><a href="#">2022 홀리데이 에디션</a></li>
-                        <li><a href="#">스킨 리뉴잉 마이크로-도즈 세럼</a></li>
-                        <li><a href="#">울트라 훼이셜 크림 리필 파우치</a></li>
-                        <li><a href="#">키엘 수퍼 아이 크림</a></li>
-                        <li><a href="#">컨센트레이티드 훼이셜 클렌징 바</a></li>
-                        <li><a href="#">울트라 훼이셜 크림</a></li>
-                        <li><a href="#">칼렌듈라 꽃잎 토너</a></li>
-                        <li><a href="#">키엘 투명 에센스</a></li>
-                    </ul><!-- hair -->
-                </li>
-
-                <li><a href="#">베스트셀러</a>
-                    <ul class="sub best">
-                        <li><a href="#">베스트 셀러</a></li>
-                        <li><a href="#">베스트 셀러 점보 사이즈</a></li>
-                        <li><a href="#">베스트 셀러 미니 사이즈</a></li>
-                    </ul><!-- best -->
-                </li>
-
-                <li><a href="#">스킨케어</a>
-                    <ul class="sub care">
-                        <li><a href="#">클렌저 & 스크럽</a></li>
-                        <li><a href="#">토너</a></li>
-                        <li><a href="#">모이스처라이저</a></li>
-                        <li><a href="#">에센스</a></li>
-                        <li><a href="#">크림</a></li>
-                        <li><a href="#">아이 & 립 케어</a></li>
-                        <li><a href="#">마스크</a></li>
-                        <li><a href="#">자외선 차단제</a></li>
-                        <li><a href="#">피부고민별 제품 찾기</a></li>
-                        <li><a href="#">컬렉션별 제품 찾기</a></li>
-                    </ul><!-- hair -->
-                </li>
-
-                <li><a href="#">맨케어</a>
-                    <ul class="sub m_care">
-                        <li><a href="#">맨 베스트 셀러</a></li>
-                        <li><a href="#">클렌저 & 쉐이빙</a></li>
-                        <li><a href="#">토너</a></li>
-                        <li><a href="#">모이스처라이저</a></li>
-                        <li><a href="#">안티 에이징</a></li>
-                        <li><a href="#">안티 에이징</a></li>
-                        <li><a href="#">아이 & 립 케어</a></li>
-                        <li><a href="#">안티 에이징</a></li>
-                        <li><a href="#">바디 & 핸드 스페셜케어</a></li>
-                        <li><a href="#">자외선 차단제</a></li>
-                        <li><a href="#">피부고민별 제품 찾기</a></li>
-                        <li><a href="#">컬렉션별 제품 찾기</a></li>
-                    </ul><!-- m_care -->
-                </li>
-
-                <li><a href="#">선물세트</a>
-                    <ul class="sub">
-                        <li><a href="">선물세트</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#">바디 & 헤어</a>
-                    <ul class="sub hair">
-                        <li><a href="#">헤어 샴푸</a></li>
-                        <li><a href="#">헤어 컨디셔너</a></li>
-                        <li><a href="#">헤어 트리트먼트</a></li>
-                        <li><a href="#">헤어 스타일링</a></li>
-                        <li><a href="#">바디 클렌저 & 스크럽</a></li>
-                        <li><a href="#">바디 모이스처라이저</a></li>
-                        <li><a href="#">핸드 & 바디 스페셜 케어</a></li>
-                        <li><a href="#">맘 & 베이비</a></li>
-                        <li><a href="#">향수</a></li>
-                    </ul><!-- hair -->
-                </li>
-
-                <li><a href="#">반려동물</a>
-                    <ul class="sub">
-                        <li><a href="">반려동물</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#">구매 혜택</a>
-                    <ul class="sub benefit">
-                        <li><a href="#">헤어 샴푸</a></li>
-                        <li><a href="#">헤어 컨디셔너</a></li>
-                        <li><a href="#">헤어 트리트먼트</a></li>
-                        <li><a href="#">헤어 스타일링</a></li>
-                        <li><a href="#">바디 클렌저 & 스크럽</a></li>
-                        <li><a href="#">바디 모이스처라이저</a></li>
-                        <li><a href="#">핸드 & 바디 스페셜 케어</a></li>
-                        <li><a href="#">맘 & 베이비</a></li>
-                        <li><a href="#">향수</a></li>
-                    </ul><!-- benefit -->
-                </li>
-
-                <li><a href="#">이벤트</a>
-                    <ul class="sub eve">
-                        <li><a href="#">마일리지 프로그램</a></li>
-                        <li><a href="#">칼렌듈라 토너 미니 프로모션</a></li>
-                        <li><a href="#">울트라 훼이셜 크림 미니 프로모션</a></li>
-                    </ul><!-- eve -->
-                </li>
-            </ul><!-- nav_menu -->
-
-            <div class="sub_item_list">
-                <ul data_type="1" class="img_list thumb_list">
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list01.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list02.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list03.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list04.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list05.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list06.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list07.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list08.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-
-                    <li>
-                        <a href="#" class="item">
-                            <div class="img_slot bordered">
-                                <img src="img/nav_sub_list09.png" alt="Holiday">
-                            </div><!-- img_slot -->
-                        </a><!-- item -->
-                    </li>
-                </ul><!-- img_list -->
-            </div><!-- sub_item_list -->
-        </div><!-- nav_wrap -->
-
-        <section class="banner clear_fix">
-            <div class="back_color"></div><!-- back_color -->
-            <ul class="banner_box">
-                <li class="ban banner01"><a href="#"><img src="" alt=""></a></li>
-                <li class="ban banner02"><a href="#"><img src="" alt=""></a></li>
-                <li class="ban banner03"><a href="#"><img src="" alt=""></a></li>
-            </ul>
-        </section><!-- banner clear_fix -->
-
-        <section class="choice clear_fix">
-            <h2>Kiehl's CHOICE</h2>
-            <ul class="cho_list clear_fix">
-                <li>
-                    <a href="#">
-                        <div class="imgbox">
-                            <img src="img/울트라 훼이셜 크림 125ml 세트 (_4종).jpg" alt="choice">
-                        </div><!-- imgbox -->
-                    </a>
-                    <div class="textbox">
-                        <a href="#">
-                            <p>울트라 훼이셜 크림 125ml 세트 (4종)</p>
-                        </a>
-                        <span class="price">89,000원</span>
-                        <span class="s_price"></span>
-                        <div class="heart"></div>
-                        <div class="new">
-                            <p class="white">NEW</p>
+    <div id="main" class="scroll-container">
+        <section class="section1">
+            <div>
+                <div class="scene">
+                    <div class="ground">
+                        <div class="blank"></div>
+                        <div class="round">
+                            <div class="bottonBar"><span></span></div>
+                            <div class="bottonNum"><span>01</span></div>
+                            <div class="intro1"><span>꼼꼼하고 직관성있는 성격입니다. <br>한번 맡은 일은 끝까지 책임감있게 마무리합니다. <br><br>어릴적부터 직접
+                                    만드는 공예와 그림그리는 것을<br> 좋아해 산업디자인과에 진학하여 디자인에 대해 <br>세부적으로 배울 수 있었습니다. </span></div>
+                            <div class="intro2"><span>경험으로부터 나오는 더 편리하고, 더 만족스러운<br> 디자인을 하는것이 목표입니다.<br><br>목표를 위해 배울 수
+                                    있다면 어디든 달려가서<br> 열심히 열정적으로 참여하여 다양한 전문지식을<br>갖춘 디자이너가 되기위해 노력하겠습니다.</span></div>
                         </div>
-                    </div><!-- textbox -->
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="imgbox">
-                            <img src="img/울트라 훼이셜 크림 50ml.jpg" alt="choice">
-                        </div><!-- imgbox -->
-                    </a>
-                    <div class="textbox">
-                        <a href="#">
-                            <p>울트라 훼이셜 크림 50ml</p>
-                        </a>
-                        <span class="price">168,300원</span>
-                        <span class="s_price">187,000원</span>
-                        <div class="heart"></div>
-                        <div class="salebox">
-                            <p class="white">10%</p>
-                        </div><!-- salebox -->
-                    </div><!-- textbox -->
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="imgbox">
-                            <img src="img/키엘 칼렌듈라 세럼 인퓨즈드 워터 크림 100ml.jpg" alt="choice">
-                        </div><!-- imgbox -->
-                    </a>
-                    <div class="textbox">
-                        <a href="#">
-                            <p>칼렌듈라 세럼 인퓨즈드 워터 크림 100ml</p>
-                        </a>
-                        <span class="price">67,000원</span>
-                        <span class="s_price">60,300원</span>
-                        <div class="heart"></div>
-                        <div class="salebox">
-                            <p class="white">10%</p>
-                        </div><!-- salebox -->
-                    </div><!-- textbox -->
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="imgbox">
-                            <img src="img/키엘 수퍼 멀티 코렉티브 크림 75ml.jpg" alt="choice">
-                        </div><!-- imgbox -->
-                    </a>
-                    <div class="textbox">
-                        <a href="#">
-                            <p>키엘 수퍼 멀티 코렉티브 크림 75ml</p>
-                        </a>
-                        <span class="price">113,000원</span>
-                        <div class="heart"></div>
-                    </div><!-- textbox -->
-
-                </li>
-            </ul><!-- cho_list clear_fix -->
-        </section><!-- choice clear_fix -->
-
-
-        <section class="skincare clear_fix">
-
-            <h2>Kiehl's SKINCARE</h2>
-            <div class="sub_banner">
-                <img src="img/0510_UFC_PC_950_01.jpg" alt="sub_banner">
-            </div><!-- sub_banner -->
-
-
-
-
-            <div class="skin_right clear_fix">
-                <ul class="skin_list01 clear_fix">
-                    <li>
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/울트라 훼이셜 크림 125ml 세트 (_4종).jpg" alt="">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>울트라 훼이셜 크림 125ml 세트 (4종)</p>
-                            </a>
-                            <span class="price">89,000원</span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div>
-                        </div><!-- textbox -->
-
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/울트라 훼이셜 크림 50ml.jpg" alt="">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>울트라 훼이셜 크림 50ml</p>
-                            </a>
-                            <span class="price">168,300원</span>
-                            <span class="s_price">187,000원</span>
-                            <div class="heart"></div>
-                            <div class="salebox">
-                                <p class="white">10%</p>
-                            </div><!-- salebox -->
-                        </div><!-- textbox -->
-
-                    </li>
-                </ul><!-- skin_list01 -->
-                <ul class="skin_list02 clear_fix">
-                    <li>
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/키엘 칼렌듈라 세럼 인퓨즈드 워터 크림 100ml.jpg" alt="">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>칼렌듈라 세럼 인퓨즈드 워터 크림 100ml</p>
-                            </a>
-                            <span class="price">67,000원</span>
-                            <span class="s_price">60,300원</span>
-                            <div class="heart"></div>
-                            <div class="salebox">
-                                <p class="white">10%</p>
-                            </div><!-- salebox -->
-                        </div><!-- textbox -->
-
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/키엘 수퍼 멀티 코렉티브 크림 75ml.jpg" alt="">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>키엘 수퍼 멀티 코렉티브 크림 75ml</p>
-                            </a>
-                            <span class="price">113,000원</span>
-                            <div class="heart"></div>
-                        </div><!-- textbox -->
-
-                    </li>
-                </ul><!-- skin_list02 clear_fix -->
-            </div><!-- skin_right -->
-            <div class="skin_bottom clear_fix"></div>
-
-        </section><!-- skincare clear_fix -->
-
-        <div class="middle">
-            <a href="#">
-                <img src="img/middleBanner.png" alt="middleBanner">
-            </a>
-        </div><!-- middle -->
-
-
-
-        <section class="gift clear_fix">
-
-            <h2>완벽한 선물</h2>
-
-            <div class="gift_inner clear_fix">
-                <ul class="gift_list clear_fix">
-
-                    <li class="g_01">
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/gift01.jpg" alt="gift">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>칼렌듈라 꽃잎 토너 250ml 홀리데이 세트</p>
-                            </a>
-                            <span class="price">59,000원</span>
-                            <span class="s_price"></span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div><!-- new -->
-                        </div><!-- textbox -->
-                    </li>
-                    <li class="g_02">
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/gift02.jpg" alt="gift">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>파워풀 비타민C 에센스 100ml 세트</p>
-                            </a>
-                            <span class="price">163,000원</span>
-                            <span class="s_price"></span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div><!-- new -->
-                        </div><!-- textbox -->
-                    </li>
-                    <li class="g_03">
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/gift03.jpg" alt="gift">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>울트라 촉촉 세트</p>
-                            </a>
-                            <span class="price">82,000원</span>
-                            <span class="s_price"> </span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div><!-- new -->
-                        </div><!-- textbox -->
-                    </li>
-                    <li class="g_04">
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/gift04.jpg" alt="gift">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>맨즈 베이직 세트</p>
-                            </a>
-                            <span class="price">91,000원</span>
-                            <span class="s_price"></span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div><!-- new -->
-                        </div><!-- textbox -->
-                    </li>
-                    <li class="g_05">
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/gift05.jpg" alt="gift">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>맨즈 촉촉 세트</p>
-                            </a>
-                            <span class="price">87,000원</span>
-                            <span class="s_price"></span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div><!-- new -->
-                        </div><!-- textbox -->
-                    </li>
-                    <li class="g_06">
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/gift06.jpg" alt="gift">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>울트라 훼이셜 크림 125ml+50ml 세트</p>
-                            </a>
-                            <span class="price">78,000원</span>
-                            <span class="s_price"></span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div><!-- new -->
-                        </div><!-- textbox -->
-                    </li>
-                    <li class="g_07">
-                        <a href="#">
-                            <div class="imgbox">
-                                <img src="img/gift07.jpg" alt="gift">
-                            </div><!-- imgbox -->
-                        </a>
-                        <div class="textbox">
-                            <a href="#">
-                                <p>칼렌듈라 꽃잎 토너 500ml+250ml 세트</p>
-                            </a>
-                            <span class="price">102,000원</span>
-                            <span class="s_price"></span>
-                            <div class="heart"></div>
-                            <div class="new">
-                                <p class="white">NEW</p>
-                            </div><!-- new -->
-                        </div><!-- textbox -->
-                    </li>
-                </ul><!-- gift_list  clear_fix-->
-
-            </div><!-- gift_inner -->
-
-        </section><!-- gift clear_fix -->
-
-
-        <section class="miniban clear_fix">
-
-            <div class="m_middle clear_fix">
-                <img src="img/m_middle_banner.png" alt="m_middleBanner">
-            </div><!-- m_middle -->
-
-            <ul class="miniban_ul clear_fix">
-                <li><a href="#"><img src="img/220826_EBTQ_mini_size_486X210.jpg" alt="miniban01"></a></li>
-                <li><a href="#"><img src="img/220826_mens_486X210.jpg" alt="miniban02"></a></li>
-            </ul><!-- miniban_ul -->
-
-        </section><!-- miniban -->
-
-
-
-
-        <footer id="footer">
-
-
-            <div class="foot_top clear_fix">
-                <div class="foot_top_inner">
-                    <h2 class="f_logo">
-                        <img src="img/foot_logo.png" alt="foot_logo">
-                    </h2>
-                    <div class="p_right">
-                        <p>FINEST APOTHECARY SKINCARE</p>
-                        <p>자연성분 • 피부과학 • 맞춤서비스</p>
-                    </div><!-- p_right -->
-                </div><!-- foot_top_inner -->
-            </div><!-- foot_top -->
-
-            <div class="foot_middle clear_fix">
-                <div class="foot_middle_inner clear_fix">
-                    <h3><img src="img/footer_badge.png" alt="footer_badge"></h3>
-                    <ul class="foot_menu clear_fix">
-                        <li><a href="#">스킨 케어</a>
-                            <ul class="foot_list">
-                                <li><a href="#">클렌저 & 스크럽</a></li>
-                                <li><a href="#">토너</a></li>
-                                <li><a href="#">마스크</a></li>
-                                <li><a href="#">아이 & 립 케어</a></li>
-                                <li><a href="#">모이스처라이저</a></li>
-                                <li><a href="#">크림</a></li>
-                                <li><a href="#">에센스</a></li>
-                                <li><a href="#">자외선 차단제</a></li>
-                            </ul><!-- foot_list -->
-                        </li>
-                        <li><a href="#">맨 케어</a>
-                            <ul class="foot_list">
-                                <li><a href="#">맨 베스트 셀러</a></li>
-                                <li><a href="#">클렌저 & 쉐이빙</a></li>
-                                <li><a href="#">토너</a></li>
-                                <li><a href="#">아이 & 립 케어</a></li>
-                                <li><a href="#">모이스처라이저</a></li>
-                                <li><a href="#">안티에이징</a></li>
-                                <li><a href="#">바디 & 핸드 케어</a></li>
-                                <li><a href="#">그루밍 솔루션스</a></li>
-                                <li><a href="#">자외선 차단제</a></li>
-                            </ul><!-- foot_list -->
-                        </li>
-                        <li><a href="#">헤어 케어</a>
-                            <ul class="foot_list">
-                                <li><a href="#">샴푸</a></li>
-                                <li><a href="#">컨디셔너</a></li>
-                                <li><a href="#">트리트먼트</a></li>
-                                <li><a href="#">스타일링</a></li>
-                            </ul><!-- foot_list -->
-                        </li>
-                        <li><a href="#">바디 & 베이비</a>
-                            <ul class="foot_list">
-                                <li><a href="#">클렌저 & 스크럽</a></li>
-                                <li><a href="#">모이스처라이저</a></li>
-                                <li><a href="#">핸드 & 바디</a></li>
-                                <li><a href="#">스페셜 케어</a></li>
-                                <li><a href="#">향수</a></li>
-                                <li><a href="#">자외선 차단제</a></li>
-                            </ul><!-- foot_list -->
-                        </li>
-                        <li><a href="#">브랜드</a>
-                            <ul class="foot_list">
-                                <li><a href="#">공식 온라인 몰</a></li>
-                                <li><a href="#">단독 혜택</a></li>
-                                <li><a href="#">비회원 주문 현황 확인</a></li>
-                            </ul><!-- foot_list -->
-                        </li>
-                    </ul><!-- foot_menu -->
-
-                    <div class="sns clear_fix">
-                        <ul>
-                            <li><a href="#" class="blog">블로그</a></li>
-                            <li><a href="#" class="facebook">페이스북</a></li>
-                            <li><a href="#" class="instagram">인스타그램</a></li>
-                            <li><a href="#" class="youtube">유튜브</a></li>
-                        </ul>
-                    </div>
-                </div><!-- foot_middle_inner -->
-            </div><!-- foot_middle -->
-
-            <div class="foot_bottom clear_fix">
-                <div class="foot_bottom_inner clear_fix">
-                    <div class="m_f_b_top clear_fix">
-                        <ul>
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">매장찾기</a></li>
-                            <li><a href="#">가맹점 문의</a></li>
-                        </ul>
-                    </div><!-- m_f_b_top -->
-
-
-                    <div class="f_b_left clear_fix">
-                        <p>Ⓒ 2022 KIEHL’S SINCE 1851.</p>
-
-                        <ul class="f_list clear_fix">
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">가맹점문의</a></li>
-                            <li><a href="#">제휴문의</a></li>
-                            <li><a href="#">신규입점문의</a></li>
-                            <li><a href="#">본사정품판매처</a></li>
-                            <li><a href="#">채용안내</a></li>
-                        </ul><!--  -->
-                        <div class="office clear_fix">
-                            <p>사업자명: 엘오케이(유) | 대표: 사무엘 티보 부티에 뒤 리테일</p>
-                            <p>사업자 등록번호: 220-81-73483 | 통신판매업신고: 2012-서울강남-01663 <a href="#"><b>사업자 정보 확인 ▶</b></a></p>
-                            <p>주소: 서울특별시 강남구 영동대로 517 아셈타워 31층</p>
-                            <p>개인정보 보호 책임자: 구정연</p>
-                        </div><!-- office -->
-
-                        <div class="safe clear_fix">
-                            <a href="#">
-                                퍼스트데이터코리아(유) 구매안전(에스크로) 서비스가맹점
-                                고객님은 안전한 전자상거래를 위해<br>저희 쇼핑몰에서 가입한
-                                퍼스트데이터코리아(유)의 구매안전 서비스를 이용할 수 있습니다.
-                            </a>
-                        </div><!-- safe -->
-                        <div class="m_safe clear_fix">
-                            <a href="#">
-                                퍼스트데이터코리아(유) 구매안전(에스크로) 서비스가맹점
-                                고객님은<br>안전한 전자상거래를 위해 저희 쇼핑몰에서 가입한
-                                퍼스트데이터코리아(유)의<br>구매안전 서비스를 이용할 수 있습니다.
-                            </a>
-                        </div><!-- m_safe -->
-
-                    </div><!-- f_b_left -->
-                    <div class="f_b_right clear_fix">
-                        <div class="contact">
-                            <p>고객센터</p>
-                            <p class="cs-number">080-822-3322</p>
-                            <p class="time">AM 09:30 ~ PM 17:30 / LUNCH PM 12:30 ~ PM 13:30</p>
-                            <p class="notice">주말 및 공휴일 휴무</p>
-                        </div><!-- contact -->
-                        <div class="site clear_fix">
-                            <a href="#" class="btn-select">GLOBAL SITE</a>
-                            <select class="select-drop-list">
-                                <option value="" selected disabled hidden>GLOBAL SITE </option>
-                                <option value="https://www.kiehls.com/">America / English</option>
-                            </select>
-                        </div><!-- site -->
-                    </div><!-- f_b_right -->
-
-                    <div class="m_f_b_bottom clear_fix">
-                        <ul>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                        </ul><!-- m_f_b_bottom -->
                     </div>
 
-                </div><!-- foot_bottom_inner -->
-            </div><!-- foot_bottom -->
+
+                </div>
 
 
+                <div class="leftTop">
+                    <div class="birth">
+                        <span>14 <br>09 <br>1992 <br></span>
+                    </div>
+                    <div class="bigBar"><span></span></div>
+                    <div class="bigText"><span>9 <br>2</span></div>
+                    <div class="smallBar"><span></span></div>
 
-        </footer><!-- footer -->
+                </div>
+                <div class="smallText"><span>고연우 <br>포트폴리오 PORTFOLIO</span></div>
 
-    </div><!-- wrap -->
+                <div class="centerText">
+                    <center><img class="mainText" src="images/textKOKO.png" alt=""></center>
+                </div>
 
 
+            </div>
+        </section>
+
+        <!--section2222222222222222222222222-->
+        <section class="section2">
+            <div>
+                <div class="area1">
+                    <div class="leftTop2">
+                        <div class="birth2">
+                            <span>14 <br>09 <br>1992 <br></span>
+                        </div>
+                        <div class="bigBar2"><span></span></div>
+                        <div class="bigText2"><span>9 <br>2</span></div>
+                        <div class="smallBar2"><span></span></div>
+                    </div>
+                    <div class="smallText2"><span>고연우 <br>포트폴리오 PORTFOLIO</span></div>
+
+                </div>
+
+                <div class="area2">
+
+                    <div class="ground2">
+                        <div class="round2">
+                            <div class="bottonBar"><span></span></div>
+                            <div class="bottonNum2"><span>02</span></div>
+                            <div class="intro1_2"><span>꼼꼼하고 직관성있는 성격입니다. <br>한번 맡은 일은 끝까지 책임감있게 마무리합니다. <br><br>어릴적부터
+                                    직접 만드는 공예와 그림그리는 것을<br> 좋아해 산업디자인과에 진학하여 디자인에 대해 <br>세부적으로 배울 수 있었습니다. </span></div>
+                            <div class="intro2_2"><span>경험으로부터 나오는 더 편리하고, 더 만족스러운<br> 디자인을 하는것이 목표입니다.<br><br>목표를 위해 배울
+                                    수 있다면 어디든 달려가서<br> 열심히 열정적으로 참여하여 다양한 전문지식을<br>갖춘 디자이너가 되기위해 노력하겠습니다.</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!--area2-->
+            </div>
+        </section>
+        <!--section3333333333333333333333333333-->
+        <section class="section3">
+            <div>
+                <div class="area1">
+                    <div class="leftTop2">
+                        <div class="birth2">
+                            <span>14 <br>09 <br>1992 <br></span>
+                        </div>
+                        <div class="bigBar2"><span></span></div>
+                        <div class="bigText2"><span>9 <br>2</span></div>
+                        <div class="smallBar2"><span></span></div>
+                    </div>
+                    <div class="smallText2"><span>고연우 <br>포트폴리오 PORTFOLIO</span></div>
+                    <div class="tenPlace">
+                        <div class="firstBox">
+                            
+                        </div>
+
+                        <div class="secondBox">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--area1-->
+
+                <div class="area2">
+                    <div class="ground3">
+                        
+                        
+                    </div>
+
+                </div>
+                <!--area2-->
+            </div>
+        </section>
+
+    </div>
+    <script src="js/full-page-scroll.js"></script>
+    <script type="text/javascript">
+        new fullScroll({
+            displayDots: true,
+            dotsPosition: 'left',
+            animateTime: 0.7,
+            animateFunction: 'ease'
+        });
+    </script>
 
 </body>
 
