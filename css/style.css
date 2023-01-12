@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+#wrap {}
+
+#fullpage {}
+
+.contents {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section01 {
+    margin: 0 auto;
+    flex-flow: row nowrap;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.section01 p {
+    display: block;
+}
+
+.section02 {
+    background-color: #eee;
+}
+
+.project_web {
+    width: 1200px;
+    margin: 0 auto;
+    /* padding-top: 100px;
+    padding-bottom: 150px; */
+}
+
+.project_web h1::before {
+    content: '';
+    width: 7px;
+    height: 35px;
+    background-color: #ffcb00;
+    position: relative;
+    display: inline-block;
+    right: 5px;
+    top: 5px;
+    margin-right: 10px;
+}
+
+.project_web h1 {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 17px;
+}
+
+.project_web .project {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project_web .project .img {
+    width: 450px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project_web .project .pro_img1 {
+    background-image: url(../img/clear1.jpg);
+}
+
+.project_web .project .pro_img2 {
+    background-image: url(../img/clear2.jpg);
+}
+
+.project_web .project .pro_img3 {
+    background-image: url(../img/clear3.jpg);
+}
+
+.project_web .project .pro_img3 {
+    background-image: url(../img/clear4.jpg);
+}
+
+.project_web .project .content {
+    margin-left: 30px;
+    width: 650px;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.project_web .project .content dl {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.project_web .project .content dl dt {
+    width: 25%;
+    padding: 10px 0;
+    font-weight: 700;
+    color: #ffcb00;
+}
+
+.project_web .project .content dl dd {
+    width: 75%;
+    padding: 10px 0;
+}
+
+.site_go {
+    width: 200px;
+    text-align: center;
+    line-height: 150px;
+    background-color: #1E445B;
+    color: white;
+    transition: all 0.3s;
+}
+
+.site_go:hover{
+    background-color: white;
+    color: #1E445B;
+}
+
+/*  */
+.project_web .project1 {}
+
+.project_web .project2 {
+    margin-top: 100px;
+}
+
+.project_web .project4 {
+    margin-top: 100px;
+}
+
+.section03 {}
+
+/* 
+PROFILE
+*/
+.contents_wrap {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.contents_wrap .photo {
+    background-size: cover;
+    background-position: top;
+    background-image: url(../img/my.png);
+    width: 50%;
+    padding-bottom: 50%;
+    padding-right: 30%;
+    margin-right: 100px;
+    border-radius: 50%;
+
+}
+
+.contents_wrap .info_all {
+    display: grid;
+    flex-flow: row wrap;
+    grid-template: max-content max-content / 40% calc(60% - 24px);
+    gap: 60px 24px;
+    /* border: 1px solid red; */
+}
+
+.contents_wrap .info_all .info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    /* border: 1px solid red; */
+}
+
+.contents_wrap .info_all .info h2 {
+    font-size: 1.25rem;
+    color: #1E445B;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.contents_wrap .info_all .info ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+.contents_wrap .info_all .info ul li {
+    color: #577C93;
+    display: flex;
+    gap: 12px;
+}
+
+.contents_wrap .info_all .info ul li p {
+    line-height: 1.3;
+}
+
+.contents_wrap .info_all .info ul li p.mail {
+    word-break: break-all;
+}
+
+.contents_wrap .info_all .info ul li p:nth-child(1) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    width: 40px;
+    white-space: nowrap;
+
+}
+
+.contents_wrap .info_all .info.profile ul li p:nth-child(1) {
+    width: 60px;
+}
+
+.contents_wrap .info_all .info.skills ul li p:nth-child(1) {
+    width: 140px;
+}
+
+.contents_wrap .info_all .info ul li p:nth-child(2) {
+    letter-spacing: -0.02em;
+    width: 85%;
+    margin-left: 20px;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+
+.contents_wrap .info_all .info.skills ul li p.level {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.contents_wrap .info_all .info.skills ul li p.level span {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.contents_wrap .info_all .info.skills ul li p.level span.fill {
+    background: lightcoral;
+}
+
+.contents_wrap .info_all .info.skills ul li p.level span.empty {
+    background: lightgray;
+}
+
+
+
+
+.section04 {
+    background-color: lightcoral;
+}
+
+
+.burger {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+}
+
+.burger span {
+    height: 2px;
+    width: 20px;
+    background-color: #000;
+    margin: 2px;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.burger:hover span:first-child {
+    width: 10px;
+    transform: rotate(33deg) translate(6px, 0px);
+}
+
+.burger:hover span:last-child {
+    width: 10px;
+    transform: rotate(-33deg) translate(6px, 0px);
+}
+
+.menu {
+    width: 20%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.4s;
+}
+
+.menu_active {
+    transform: translateX(0%);
+    transition: all 0.4s;
+}
+
+.menu .btn_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 20px;
+    height: 25px;
+    width: 25px;
+    color: purple;
+    padding: 0;
+    border: 0;
+}
+
+.menu .btn_close:hover {
+    color: purple;
+    transform: rotate(180deg);
+}
+
+.menu ul li {
+    margin: 10px;
+    font-size: 25px;
+}
+
+.menu ul li a {
+    color: #fff;
+}
+
+.menu ul li a:hover {
+    color: purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {}
+
+
+
+
+/* max-width : 768px  768px까지는~ */
