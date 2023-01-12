@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    font-size: 14px;
+    color: #333;
+    overflow-x: hidden;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    /* border: 1px solid black; */
+}
+
+.clear_fix::before,
+.clear_fix::after {
+    display: block;
+    content: "";
+    clear: both;
+}

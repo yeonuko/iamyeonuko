@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* 같은 경로에 있다. */
+@import url("reset.css");
+@import url("slick.css");
+@import url("font.css");
+@import url("fontello.css");
+@import url("layout.css");/* 기본 PC용 */
+@import url("media.css");/* 모바일용 */
+
