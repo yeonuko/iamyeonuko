@@ -1,0 +1,407 @@
+@charset "UTF-8";
+
+#wrap {
+    position: relative;
+}
+
+#header {
+    width: 1920px;
+    height: 115px;
+    /* background-color: aliceblue; */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 10;
+}
+
+.head_inner {
+    width: 1200px;
+    margin: 0 auto;
+    /* background-color: antiquewhite; */
+    height: 115px;
+}
+
+#header:hover {
+    background-color: white;
+    color: black;
+}
+
+.top_menu {
+    /* border: 1px red solid; */
+    padding-top: 10px;
+    text-align: right;
+}
+
+.top_menu li {
+    display: inline-block;
+}
+
+.top_menu li a {
+    font-size: 13px;
+    font-weight: 600;
+    /* color: white; */
+    display: block;
+    padding-left: 20px;
+}
+
+.logo {
+    width: 112px;
+    height: 45px;
+    background: url(../img/ico-zeus-logo.png)no-repeat left top;
+    float: left;
+    margin-top: 10px;
+}
+
+#header:hover .logo {
+    background-position: left bottom;
+}
+
+
+.logo a {
+    display: block;
+    /* 코드의 텍스트를 안보이게 한다 */
+    height: 100%;
+    text-indent: -9999px;
+    /* 들여쓰기(모니터 밖으로 내보내기_ */
+}
+
+.nav {
+    float: right;
+    padding-top: 36px;
+}
+
+.nav ul {}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.nav ul li a {
+    font-size: 18px;
+    /* color: white; */
+    font-weight: 600;
+}
+
+
+.img_slide {
+    width: 1920px;
+    height: 710px;
+    margin: 0 auto;
+    /* border: 1px solid red;  */
+}
+
+
+.img_slide li img{
+    width: 100%;
+}
+
+.img_slide .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+
+.img_slide .slick-dots li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.img_slide .slick-dots li button {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #666;
+    border-radius: 50%;
+    text-indent: -9999px;
+    border: none;
+}
+
+.img_slide .slick-dots li.slick-active button {
+    background-color: #cf112b;
+}
+
+.img_slide .slick-arrow {
+    /* 양쪽 공통 명령 */
+    position: absolute;
+    text-indent: -9999px;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 58px;
+    /* border: 1px solid red; */
+    z-index: 10;
+}
+
+.img_slide .slick-prev {
+    top: 46%;
+    left: 2%;
+    background: url(../img/main-kv-arr-l.png) no-repeat center;
+}
+
+.img_slide .slick-next {
+    top: 46%;
+    right: 2%;
+    background: url(../img/main-kv-arr-r.png) no-repeat center;
+}
+
+
+
+
+
+#contents {
+    width: 1200px;
+    margin: 80px auto 50px;
+}
+
+#contents .title {
+    /* border: 1px solid red; */
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000;
+    padding: 40px 0 40px;
+}
+
+#contents .zeus_menu {
+    /* border: 1px red solid; */
+    text-align: center;
+}
+
+#contents .zeus_menu li {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+#contents .zeus_menu li a {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#contents .zeus_menu li.first a {
+    font-weight: bold;
+    color: black;
+}
+
+#contents .zeus_menu li.first {
+    border-bottom: 2px black solid;
+
+}
+
+
+
+.zeus_cla {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.zeus_cla li {
+    width: 384px;
+    height: 520px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.zeus_cla li .top {
+    width: 61px;
+    height: 70px;
+    background: #000;
+    position: absolute;
+    left: 25px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.zeus_cla li .top span {
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.zeus_cla li .zeus_cla_txt {
+    width: 344px;
+    height: 265px;
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    /* transform: translateX(-50%); */
+    margin-left: -172px;
+    transition: all 0.5s;
+    padding: 20px;
+    color: white;
+}
+
+.zeus_cla li:hover .zeus_cla_txt {
+    top: 45%;
+    background-color: white;
+    color: #000;
+}
+
+.zeus_cla li .zeus_cla_txt .p1 {
+    line-height: 1.6;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.zeus_cla li .zeus_cla_txt .p2 {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 40px;
+}
+
+.zeus_cla li .zeus_cla_txt .p3 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.zeus_cla li .zeus_cla_txt .p3 span {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.zeus_cla li.zeus_cla_01 {
+    background: url(../img/1-1_프랑스와스위스.jpg) no-repeat center center;
+}
+
+.zeus_cla li.zeus_cla_02 {
+    margin: 0 24px;
+    background: url(../img/1-2_이탈리아_토스카나.jpg) no-repeat center center;
+
+}
+
+.zeus_cla li.zeus_cla_03 {
+    background: url(../img/1-3_포르투갈과스페인.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.zeus_cla li.zeus_spe_01 {
+    background: url(../img/2-1_캐나다벤쿠버.jpg) no-repeat center center;
+}
+
+.zeus_cla li.zeus_spe_02 {
+    margin: 0 24px;
+    background: url(../img/2-2_호주시드니.jpg) no-repeat center center;
+
+}
+
+.zeus_cla li.zeus_spe_03 {
+    background: url(../img/2-3_아만풀로.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+
+
+/* notice */
+.notice {
+    overflow: hidden;
+}
+
+.notice ul {}
+
+.notice ul li {
+    float: left;
+    width: calc(100% / 4);
+    text-align: center;
+    border-right: 1px dotted #ccc;
+}
+
+.notice ul li:last-child {
+    border-right: none;
+}
+
+.notice ul li p {
+    padding: 10px 0;
+    line-height: 1.6;
+}
+
+
+
+/* footer */
+
+#footer {
+    border-top: 2px solid #ddd;
+    clear: both;
+}
+
+.foot_inner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.foot_menu {
+    float: left;
+    font-size: 12px;
+}
+
+.foot_menu li {
+    display: inline-block;
+}
+
+
+.foot_menu li a {
+    padding: 5px;
+}
+
+.foot_menu li a.person {
+    font-weight: bold;
+}
+
+.foot_zeus {
+    float: right;
+    font-size: 12px;
+}
+
+.hana {
+    clear: both;
+    padding-top: 20px;
+}
+
+.hana li,
+.address li,
+.data li {
+    display: inline-block;
+    padding: 5px;
+    font-size: 12px;
+    color: #444;
+}
+
+.hana_first {
+    font-weight: bold;
+
+}
+.add_busi{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.center{
+    font-weight: bold;
+    background: url(../img/call.png) no-repeat left center;
+    text-indent: 20px;
+}
+.foot_p1{
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.copy{
+    font-size: 12px;
+    padding-top: 30px;    
+}
+.f_logo{
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+.f_logo img{
+    width: 181px;
+}
