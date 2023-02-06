@@ -65,10 +65,11 @@
 }
 
 .project_web h1 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     border-bottom: 2px solid #999;
-    padding-bottom: 17px;
+    padding-bottom: 10px;
     font-family: 'GmarketSans';
+    /* border: 1px solid red; */
 
 }
 
@@ -198,8 +199,8 @@ section05 gallery
 
 .box_gallery {
     width: 1200px;
-    height: 800px;
-    margin: 0 auto;
+    height: 820px;
+    margin: -20px auto 0;
     /* border: 1px solid blue; */
 }
 
@@ -317,7 +318,7 @@ PROFILE
 
 .contents_wrap .info_all .info h2 {
     font-size: 20px;
-    color: #1E445B;
+    color: royalblue;
     font-family: 'GmarketSans';
     font-weight: 600;
 }
@@ -329,7 +330,7 @@ PROFILE
 }
 
 .contents_wrap .info_all .info ul li {
-    color: #577C93;
+    color: steelblue;
     display: flex;
     gap: 12px;
 }
@@ -380,7 +381,7 @@ PROFILE
 }
 
 .contents_wrap .info_all .info.skills ul li p.level span.fill {
-    background: lightcoral;
+    background: lightskyblue;
 }
 
 .contents_wrap .info_all .info.skills ul li p.level span.empty {
