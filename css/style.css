@@ -26,6 +26,10 @@
 
 .section01 video {
     /* border: 1px solid pink; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
 .section01 p {
@@ -33,7 +37,7 @@
     /* border: 1px solid red; */
     position: absolute;
     left: 50%;
-    bottom: 150px;
+    bottom: 80px;
     transform: translateX(-50%);
     font-size: 20px;
     line-height: 1.8;
@@ -44,16 +48,25 @@
     background-color: #eee;
     width: 100%;
     /* border: 1px solid red; */
+    margin-top: 0px;
+}
+
+.section02 .project_web {
+    /* border: 1px solid blue; */
+    margin-top: -30px;
 }
 
 .project_web {
     width: 1200px;
+    /* height: 100vh; */
     margin: 50px auto 0;
     /* border: 1px solid blue; */
 }
+
 .m_project_web {
     display: none;
 }
+
 .project_web h1::before {
     content: '';
     width: 7px;
@@ -181,14 +194,16 @@
 }
 
 .section03 {}
-.section03 .project_web{
+
+.section03 .project_web {
     margin-top: 0px;
 }
 
 .section04 {
     background-color: #eee;
 }
-.section04 .project_web{
+
+.section04 .project_web {
     margin-top: 0px;
 }
 
@@ -204,7 +219,8 @@ section05 gallery
     /* border: 1px solid palevioletred; */
     padding-bottom: 10px;
 }
-.section05 .project_web{
+
+.section05 .project_web {
     /* border: 1px solid red; */
 }
 
@@ -215,7 +231,7 @@ section05 gallery
     /* border: 1px solid blue; */
 }
 
-.box_gallery_cont{
+.box_gallery_cont {
     margin: 0 auto;
 }
 
@@ -610,19 +626,23 @@ PROFILE
         font-size: 1em;
     }
 
-    .section02, .section03, .section04 {
+    .section02,
+    .section03,
+    .section04 {
         background-color: #eee;
         width: 100vw;
     }
-    
+
     .project_web {
         display: none;
     }
+
     .m_project_web {
         display: block;
         width: 85%;
         height: 100%;
     }
+
     .m_project_web h1::before {
         content: '';
         width: 7px;
@@ -635,7 +655,7 @@ PROFILE
         top: 5px;
         margin-right: 10px;
     }
-    
+
     .m_project_web h1 {
         margin-top: 30px;
         margin-bottom: 20px;
@@ -645,16 +665,16 @@ PROFILE
         font-size: 1.6em;
         /* border: 1px solid red; */
     }
-    
+
     .m_project_web .project {
         margin: 0 auto;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0 0 50px 0 ;
+        padding: 0 0 50px 0;
     }
-    
+
     .m_project_web .project .img {
         width: 100%;
         height: 150px;
@@ -665,43 +685,43 @@ PROFILE
         border: 1px solid #eee;
         box-shadow: 2px 2px 2px #999;
     }
-    
+
     .m_project_web .project .pro_img1 {
         background-image: url(../img/clear1.jpg);
     }
-    
+
     .m_project_web .project .pro_img2 {
         background-image: url(../img/clear2.jpg);
     }
-    
+
     .m_project_web .project .pro_img3 {
         background-image: url(../img/clear3.jpg);
     }
-    
+
     .m_project_web .project .pro_img4 {
         background-image: url(../img/clear4.jpg);
     }
-    
+
     .m_project_web .project .pro_img5 {
         background-image: url(../img/clear5.jpg);
     }
-    
+
     .m_project_web .project .pro_img6 {
         background-image: url(../img/clear6.jpg);
     }
-    
+
     .m_project_web .project .content {
         width: 650px;
         /* border: 1px solid red; */
-        padding: 15px 0 0 0; 
+        padding: 15px 0 0 0;
         display: flex;
     }
-    
+
     .m_project_web .project .content dl {
         display: flex;
         flex-flow: row wrap;
     }
-    
+
     .m_project_web .project .content dl dt {
         width: 30%;
         padding: 10px 0;
@@ -709,10 +729,10 @@ PROFILE
         color: #525252;
         font-size: 0.9em;
     }
-    
+
     .m_project_web .project .content dl dd {
         width: 70%;
-        padding: 10px 0 0 10px ;
+        padding: 10px 0 0 10px;
         font-size: 0.9em;
     }
 
