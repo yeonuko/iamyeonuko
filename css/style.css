@@ -617,10 +617,9 @@ introduce
     }
 
     .section01 video {
-        width: 180%;
-        left: 50%;
+        max-width: 100vw;
         top: 20%;
-        transform: translateX(-50%);
+        /* border: 1px solid red; */
     }
 
     .section01 p {
@@ -783,22 +782,112 @@ introduce
         flex-flow: row wrap;
         width: 90vw;
         height: 85vh;
-        border: 1px solid red;
+        /* border: 1px solid blue; */
     }
 
-.contents_wrap .photo {
-    width: 60%;
-    padding-bottom: 60%;
-    margin-right: 0px;
-    margin-top: 50px;
-}
+    .contents_wrap .info_all .info ul {
+        gap: 10px;
+    }
 
-.contents_wrap .info_all .info h2 {
-    font-size: 1em;
-}
+    .contents_wrap .info_all .info ul li {
+        gap: 0px;
+    }
+
+    .contents_wrap .info_all .info ul li p:nth-child(2) {
+        letter-spacing: -0.02em;
+        width: 80%;
+        margin-left: 12px;
+        text-align: left;
+        /* border: 1px solid red; */
+    }
+
+    .contents_wrap .info_all .info.skills ul li p:nth-child(1) {
+        width: 110px;
+        /* border: 1px solid red; */
+    }
+
+
+    .contents_wrap .info_all .info.skills ul li p.level span {
+        width: 12px;
+    }
+
+    .contents_wrap .photo {
+        width: 50%;
+        padding-bottom: 50%;
+        margin-right: 0px;
+    }
+
+    .contents_wrap .info_all .info h2 {
+        font-size: 13px;
+    }
+
+    .contents_wrap .info_all .info ul li p {
+        font-size: 11px;
+        line-height: 1;
+    }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section08 {
+        width: 100vw;
+    }
+
+    .section08 h2 {
+        font-size: 2.5em;
+    }
+
+    .section08 .hope_to_see_you {
+        width: 90vw;
+        margin-top: 20px;
+    }
+
+    .section08 .hope_to_see_you>p {
+        font-size: 1.8em;
+    }
+
+    .section08 .hope_to_see_you>span {
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+
+    .to_list {
+        margin-top: 20px;
+        width: 80%;
+        height: 250px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .to_list li {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 30px;
+    }
+
+    .to_list li p {
+        line-height: 2.5em;
+        font-size: 13px;
+    }
+
+    .list_text {
+        line-height: 1;
+        font-size: 11px;
+    }
 
 
 
